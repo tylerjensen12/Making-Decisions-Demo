@@ -50,10 +50,24 @@ if (coinLandsHeads) {
     console.log("Jon is allowed to run away")
 }
 
-for (let i = 0; i < 5; i++) {
-    jonSnowHealth -= jamieLannisterAttack - jonSnowDefense
-    console.log(`Jon's health is now` + jonSnowHealth)
+// for (let i = 0; i < 5; i++) {
+//     let currenthealth = jonSnowHealth - jamieLannisterAttack + jonSnowDefense
+//     if (currenthealth <= 0) {
+//         jonSnowHealth = 0
+//         console.log('Jon is dead')
+//         break
+//     } else {
+//         jonSnowHealth = currenthealth
+//         console.log(`Jon's health is now ` + jonSnowHealth)
+//     }
+// }
+
+
+while (jonSnowHealth - jamieLannisterAttack + jonSnowDefense > 0) {
+    jonSnowHealth = jonSnowHealth - jamieLannisterAttack + jonSnowDefense 
+    console.log(`Jon's health is now ` + jonSnowHealth)
 }
+console.log(`Jon's dead`)
 
 
 //Post-lab assignment 1:
